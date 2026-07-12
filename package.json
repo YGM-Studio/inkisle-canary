@@ -1,0 +1,20 @@
+{
+  "name": "inkisle-canary",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node node_modules/inkisle/bin/inkisle.mjs dev",
+    "build": "node node_modules/inkisle/bin/inkisle.mjs build",
+    "check": "node node_modules/inkisle/bin/inkisle.mjs check",
+    "check:links": "node node_modules/inkisle/bin/inkisle.mjs check links",
+    "verify:package": "node -e \"const expected=require('./package.json').dependencies.inkisle;const actual=require('./node_modules/inkisle/package.json').version;if(actual!==expected)throw new Error('Expected inkisle '+expected+', received '+actual)\"",
+    "ci": "npm run verify:package && npm run check && npm run build && npm run check:links",
+    "preview": "node node_modules/inkisle/bin/inkisle.mjs preview",
+    "new:post": "node node_modules/inkisle/bin/inkisle.mjs new post",
+    "new:page": "node node_modules/inkisle/bin/inkisle.mjs new page"
+  },
+  "dependencies": {
+    "inkisle": "0.0.18"
+  }
+}
