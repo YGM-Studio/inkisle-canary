@@ -13,6 +13,12 @@ source repository.
 - The personal theme loads Giscus comments and reactions from the main InkIsle
   repository.
 
+## Operations
+
+The shared [Canary Sites runbook](https://github.com/YGM-Studio/inkisle/blob/main/docs/canary-sites.md)
+documents environment ownership, interaction data, release updates, live
+acceptance checks, and common failure signals for both npm canaries.
+
 ## Commands
 
 ```bash
